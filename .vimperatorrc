@@ -6,54 +6,59 @@ source! /home/kekke/.vimperatorrc.local
 
 set titlestring = Firefox
 
-" $BF~NOMs$K<+F0%U%)!<%+%9$7$J$$(B
+set ignorecase
+" 入力欄に自動フォーカスしない
 set focuscontent
-" $B%S%8%e%"%k%Y%k$rI=<($7$J$$(B
+" ビジュアルベルを表示しない
 set visualbell
 highlight Bell display:none
-" :o$B$J$I$G$NJd408uJd$r%5!<%A%(%s%8%s!"MzNr$K8BDj(B
+" :oなどでの補完候補をサーチエンジン、履歴に限定
 "set complete=sl
-" Hint$B%b!<%I$G%"%k%U%!%Y%C%H;HMQ(B
+" Hintモードでアルファベット使用
 "set hintchars=jfnvurhgytbkdmcielsxoe
-" $B%D!<%k%P!<$O%"%I%*%s$H%?%V$N$_I=<((B
+set hintchars=aoeuhtns
+" ツールバーはアドオンとタブのみ表示
 "set gui=addons,nobookmarks,nomenu,nonavigation,tas
-" command$B%b!<%I$G(BIME$B%*%U(B
+" commandモードでIMEオフ
 style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
-" google$B8!:w$r<jAa$/$9$k(B
+" google検索を手早くする
 noremap s :open<Space>google<Space>
 noremap S :tabopen<Space>google<Space>
 
-" $B%G%U%)%k%H$N%R%s%HGI<j$9$.!d!c(B
+" デフォルトのヒント派手すぎ＞＜
 hi Hint font-family: Arial; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
 hi HintElem color: gray; background-color: #a1e4e6;
 hi HintActive color: black; background-color: #ff8700;
 
-" $B%G%U%)%k%H$N%(%i!<@V$/$F$3$o$$!d!c(B
+" デフォルトのエラー赤くてこわい＞＜
 hi ErrorMsg color:white; background-color: #ec6aa1;
 
-" $BJd40%j%9%H$O8!:w%(%s%8%s$HMzNr(B
-" $B%*!<%H%3%s%W%j!<%H4X78(B
-" s $B8!:w%(%s%8%s$N$s(B
-" f $B%m!<%+%k%U%!%$%k(B
-" b $B%V%C%/%^!<%/(B
-" h $BMzNr(B
-" l $B%m%1!<%7%g%s%P!<(B($B%V%C%/%^!<%/!"MzNr(B)
-" S $B8!:w%5%8%'%9%H(B
+" 補完リストは検索エンジンと履歴
+" オートコンプリート関係
+" s 検索エンジンのん
+" f ローカルファイル
+" b ブックマーク
+" h 履歴
+" l ロケーションバー(ブックマーク、履歴)
+" S 検索サジェスト
 set complete=Sl
 
-" $B%-!<%^%C%W(B
-" nmap $B%N!<%^%k%b!<%I(B
-" imap $B%$%s%5!<%H%b!<%I(B
-" vmap $B%S%8%e%"%k%b!<%I(B
-" cmap $B%3%^%s%I%b!<%I(B
-" omap $B%*%Z%l!<%?BT5!%b!<%I(B
-" map$B$G$J$/(Bnoremap$B;H$&(B
+" キーマップ
+" nmap ノーマルモード
+" imap インサートモード
+" vmap ビジュアルモード
+" cmap コマンドモード
+" omap オペレータ待機モード
+" mapでなくnoremap使う
+
+set nextpattern=^次(へ|の|ペ)?,^続き,ＮＥＸＴ,(next|more),^(>>*|»)
+set previouspattern=^前(へ|の|ペ)?,^戻る,ＢＡＣＫ,(prev|previous),^(<<*|«)
+let g:nextlink_nositeinfo_act = "f"
 
 "---------------------------------------------------
 " qmarks
 "---------------------------------------------------
-
 qmark m https://mail.google.com/
-
+qmark w http://ejje.weblio.jp/
 
 echo "success"

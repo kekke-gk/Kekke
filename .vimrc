@@ -115,6 +115,13 @@ vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v, '\/'), "\n", '\\n', 'g')<C
 
 cmap w!! w !sudo tee > /dev/null %
 
+" ColorScheme
+syntax on
+set background=dark
+colorscheme hybrid
+"colorscheme molokai
+
+
 " NeoBundle
 if !1 | finish | endif
 
@@ -133,3 +140,7 @@ NeoBundleCheck
 
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'terryma/vim-multiple-cursors'
+
+" Color Scheme
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'tomasr/molokai'

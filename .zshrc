@@ -42,6 +42,7 @@ alias -g W='| wc'
 alias -g X='| xargs'
 alias tsp='tmux new-session \; split-window -h -d'
 alias tvsp='tmux new-session \; split-window -d'
+alias xclip='xclip -sel clip'
 
 # Python
 export WORKON_HOME=$HOME/.virtualenvs
