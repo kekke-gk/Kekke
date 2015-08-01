@@ -43,8 +43,14 @@ alias -g X='| xargs'
 alias tsp='tmux new-session \; split-window -h -d'
 alias tvsp='tmux new-session \; split-window -d'
 alias xclip='xclip -sel clip'
+alias ptex2pdf='ptex2pdf -u -l'
+alias open='gnome-open'
 
 # Python
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"

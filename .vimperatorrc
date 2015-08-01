@@ -22,8 +22,8 @@ set hintchars=aoeuhtns
 " commandモードでIMEオフ
 style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 " google検索を手早くする
-noremap s :open<Space>google<Space>
-noremap S :tabopen<Space>google<Space>
+noremap S :open<Space>google<Space>
+noremap s :tabopen<Space>google<Space>
 
 " デフォルトのヒント派手すぎ＞＜
 hi Hint font-family: Arial; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
@@ -60,5 +60,9 @@ let g:nextlink_nositeinfo_act = "f"
 "---------------------------------------------------
 qmark m https://mail.google.com/
 qmark w http://ejje.weblio.jp/
+qmark p http://getpocket.com/a/queue
+qmark e https://www.evernote.com/Home.action
+qmark l http://lifebear.com/top#calendar
+qmark s https://xythos.tokyo-ct.ac.jp/web/j/hp/index.html
 
 echo "success"
